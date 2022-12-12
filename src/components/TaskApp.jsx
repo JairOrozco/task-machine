@@ -3,13 +3,13 @@
 import { useTodo } from "../Hooks/useTodo"
 
 //Componentes
-import { TodoList } from './TodoList'
-import { TodoAdd } from "./TodoAdd"
+import { TaskList } from './TaskList'
+import { TaskAdd } from "./TaskAdd"
 import { NoTaskPending } from './NoTaskPending'
 
 
 
-export const TodoApp = () => {
+export const TaskApp = () => {
 
     const { todos, totalTodos, completedTodos, handleNewTodo, handleDeleteTodo, handleToggleTodo } = useTodo()
 
@@ -29,14 +29,14 @@ export const TodoApp = () => {
             </section>
 
             <section className="formAddTodos">
-                <TodoAdd onNewTodo={ handleNewTodo } />
+                <TaskAdd onNewTodo={ handleNewTodo } />
             </section>
 
             {
                 (totalTodos === 0)
                     ? <NoTaskPending />
                     : <section className="todosContainer">
-                        <TodoList 
+                        <TaskList 
                             todos={ todos }
                             onDeleteTodo={ handleDeleteTodo } 
                             onToggleTodo={ handleToggleTodo }

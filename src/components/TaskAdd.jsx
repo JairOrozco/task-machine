@@ -1,7 +1,7 @@
 import { useForm } from "../Hooks/useForm";
 
 
-export const TodoAdd = ({ onNewTodo }) => {
+export const TaskAdd = ({ onNewTodo }) => {
 
     const { description, inputChange, onResetForm } = useForm({ 
         description: ''
