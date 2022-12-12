@@ -1,5 +1,5 @@
 
-export const todoReducer = ( initialState = [], action ) => {
+export const taskReducer = ( initialState = [], action ) => {
 
 
     switch ( action.type ) {

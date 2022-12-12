@@ -2,7 +2,7 @@
 import { useReducer, useEffect } from "react"
 
 // Reducer que se usará
-import { todoReducer } from "../utils/TaskReducer"
+import { taskReducer } from "../utils/TaskReducer"
 
 
 const init = () => {
@@ -12,7 +12,7 @@ const init = () => {
 
 export const useTodo = () => {
 
-    const [ todos, dispatch ] = useReducer( todoReducer, [], init )
+    const [ todos, dispatch ] = useReducer( taskReducer, [], init )
 
 
     useEffect( () => {

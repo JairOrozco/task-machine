@@ -1,70 +1,190 @@
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  font-size: 62.5%;
+
+  /*  Variables de fuente */
+  
+  --text: 'Khula', sans-serif;
+  --subtitlesAndform: 'Lato', sans-serif;
+  --titles: 'Prompt', sans-serif;
+
+  /*  Variables de color */
+  --formButtons: #478BBC;
+  --marginTodoComplete: #0B8F0B
+}
+
+#root {
+  width: 100%;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  max-width: 425px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 0;
+}
+
+.header__containerLogo {
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__Logo {
+  width: 100%;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-family: var(--titles);
+  font-size: 3.2rem;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+
+/* control todos */
+.controlTodos {
+  width: 100%;
+  max-width: 425px;
+}
+
+.controlTodos__text {
+  width: 100%;
+  font-family: var(--subtitlesAndform);
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+/* form */
+.formAddTodos {
+  width: 100%;
+  max-width: 425px;
+}
+
+.formAddTodos__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 40px 0 20px;
+}
+
+.form__input {
+  width: 100%;
+  height: 40px;
+  padding: 0 15px;
+  margin: 18px 0 12px 0;
+  font-family: var(--subtitlesAndform);
+  font-size: 1.1rem;
+  border: 1px solid rgb(194, 194, 194);
+  border-radius: 5px;
+}
+
+.form__button {
+  width: 65px;
+  height: 25px;
+  font-family: var(--subtitlesAndform);
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  outline: none;
+  background: var(--formButtons);
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Empty Todos */
+.emptyTodos {
+  width: 100%;
+  max-width: 425px;
+  display: flex;
+  justify-content: center;
+  padding: 25px 0;
 }
+.textEmptyTodos {
+  width: 70%;
+  font-family: var(--subtitlesAndform);
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+
+/* Container Todos */
+.todosContainer {
+  width: 100%;
+  max-width: 425px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px 0 20px;
+}
+
+.todosList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 15px 0;
+}
+
+
+/* Todo item */
+.todoItem {
+  width: 100%;
+  min-width: 230px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+  list-style: none;
+}
+
+.checkTodoContainer, .deleteTodoContainer {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  cursor: pointer;
+}
+
+.checkTodoContainer img, .deleteTodoContainer img {
+  width: 100%;
+}
+
+.todoDescription {
+  width: 230px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0 10px;
+  font-family: var(--text);
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  border-radius: 5px;
+}
+
+.borderTodoNoCompleted {
+  border: 2px solid rgb(177, 177, 177);
+}
+
+.borderTodoCompleted {
+  text-decoration: line-through;
+  border: 2px solid var(--marginTodoComplete);
+}
+
+

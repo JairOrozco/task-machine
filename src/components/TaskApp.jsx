@@ -7,6 +7,9 @@ import { TaskList } from './TaskList'
 import { TaskAdd } from "./TaskAdd"
 import { NoTaskPending } from './NoTaskPending'
 
+// imports imagenes
+import list from  '../assets/list.png'
+
 
 
 export const TaskApp = () => {
@@ -19,7 +22,7 @@ export const TaskApp = () => {
         <>
             <section className="header">
                 <figure className="header__containerLogo">
-                    <img className="header__Logo" src="../../assets/list.png" alt="icon list" />
+                    <img className="header__Logo" src={ list } alt="icon list" />
                 </figure>
                 <h1> Task Machine</h1>
             </section>
